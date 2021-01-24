@@ -5,5 +5,3 @@ export function sum(arr: Array<number>) {
   }
   return res;
 }
-
-console.log(sum([ 1, 2, 4, 5, 6 ]));

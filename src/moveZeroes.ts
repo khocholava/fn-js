@@ -7,4 +7,3 @@ function moveZeroes<T>(array: string | Array<T>): Array<T> | string{
   }
   return [...res.filter(item => item !== 0), ...res.filter(item => item === 0)]
 }
-// console.log(moveZeroes('123'));

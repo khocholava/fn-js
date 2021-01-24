@@ -1,8 +1,12 @@
-// import { sum } from './sum';
-// import { toInt } from './parseInt';
-// function average(arr: Array<number | string>): number {
-//   const len = arr.length;
-//   if(!Array.isArray(arr)) return
-//   const parsedValue = toInt(arr, {deep: true})
-//   sum(parsedValue)
-// }
+import { sum } from './sum';
+import { parseArrToInt } from './parseArrToInt';
+
+function average(arr: Array<number>): number;
+function average(arr: Array<string>): number;
+function average(arr: any): number {
+  const len = arr.length;
+  if (!Array.isArray(arr)) return;
+  const parsedValue = parseArrToInt(arr);
+  const arrSum = sum(parsedValue);
+  return arrSum/ len
+}
